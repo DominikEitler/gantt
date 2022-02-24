@@ -2,7 +2,7 @@
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Gantt = {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 	function getDefaultExportFromCjs (x) {
 		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -36,14 +36,11 @@
 	    }
 
 	    return target;
-	  };
-
-	  module.exports["default"] = module.exports, module.exports.__esModule = true;
+	  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	  return _extends.apply(this, arguments);
 	}
 
-	module.exports = _extends;
-	module.exports["default"] = module.exports, module.exports.__esModule = true;
+	module.exports = _extends, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	});
 
 	var _extends = /*@__PURE__*/getDefaultExportFromCjs(_extends_1);
@@ -64,8 +61,7 @@
 	  return obj;
 	}
 
-	module.exports = _defineProperty;
-	module.exports["default"] = module.exports, module.exports.__esModule = true;
+	module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	});
 
 	var _defineProperty = /*@__PURE__*/getDefaultExportFromCjs(defineProperty);
@@ -77,8 +73,7 @@
 	  }
 	}
 
-	module.exports = _classCallCheck;
-	module.exports["default"] = module.exports, module.exports.__esModule = true;
+	module.exports = _classCallCheck, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	});
 
 	var _classCallCheck = /*@__PURE__*/getDefaultExportFromCjs(classCallCheck);
@@ -97,18 +92,20 @@
 	function _createClass(Constructor, protoProps, staticProps) {
 	  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
 	  if (staticProps) _defineProperties(Constructor, staticProps);
+	  Object.defineProperty(Constructor, "prototype", {
+	    writable: false
+	  });
 	  return Constructor;
 	}
 
-	module.exports = _createClass;
-	module.exports["default"] = module.exports, module.exports.__esModule = true;
+	module.exports = _createClass, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	});
 
 	var _createClass = /*@__PURE__*/getDefaultExportFromCjs(createClass);
 
-	function ownKeys$5(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys$5(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread$5(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$5(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$5(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread$5(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$5(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$5(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	function addChild(c, childNodes) {
 	  if (c === null || c === undefined) return;
@@ -146,9 +143,9 @@
 	  };
 	}
 
-	function ownKeys$4(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys$4(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread$4(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$4(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$4(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread$4(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$4(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$4(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	var DAY = 24 * 3600 * 1000;
 	function addDays(date, days) {
@@ -556,7 +553,17 @@
 	    var str = formatMonth(cur);
 	    var x = x0 + (months[i] - minTime) / unit;
 	    var t = (months[i + 1] - months[i]) / unit;
-	    ticks.push(h("g", null, h("line", {
+	    ticks.push(h("g", null, h("rect", {
+	      x: x,
+	      y: 0,
+	      width: t,
+	      height: y2,
+	      style: {
+	        fill: '#e0e5e9',
+	        'stroke-width': 1,
+	        stroke: '#becad5'
+	      }
+	    }), h("line", {
 	      x1: x,
 	      x2: x,
 	      y1: 0,
@@ -598,7 +605,17 @@
 	      width: t,
 	      height: RH,
 	      style: styles.week
-	    }) : null, h("line", {
+	    }) : null, h("rect", {
+	      x: x,
+	      y: y0,
+	      width: t,
+	      height: offsetY - y0,
+	      style: {
+	        fill: '#e0e5e9',
+	        'stroke-width': 1,
+	        stroke: '#becad5'
+	      }
+	    }), h("line", {
 	      x1: x,
 	      x2: x,
 	      y1: y0,
@@ -773,204 +790,6 @@
 	  }), ticks);
 	}
 
-	function Grid(_ref) {
-	  var styles = _ref.styles,
-	      data = _ref.data,
-	      width = _ref.width,
-	      height = _ref.height,
-	      offsetY = _ref.offsetY,
-	      rowHeight = _ref.rowHeight,
-	      maxTextWidth = _ref.maxTextWidth;
-	  return h("g", null, data.map(function (v, i) {
-	    var y = (i + 1) * rowHeight + offsetY;
-	    return h("line", {
-	      key: i,
-	      x1: 0,
-	      x2: width,
-	      y1: y,
-	      y2: y,
-	      style: styles.line
-	    });
-	  }), h("line", {
-	    x1: maxTextWidth,
-	    x2: maxTextWidth,
-	    y1: 0,
-	    y2: height,
-	    style: styles.bline
-	  }));
-	}
-
-	function Labels(_ref) {
-	  var styles = _ref.styles,
-	      data = _ref.data,
-	      _onClick = _ref.onClick,
-	      rowHeight = _ref.rowHeight,
-	      offsetY = _ref.offsetY;
-	  return h("g", null, data.map(function (v, i) {
-	    return h("text", {
-	      key: i,
-	      x: 10,
-	      y: (i + 0.5) * rowHeight + offsetY,
-	      "class": "gantt-label",
-	      style: styles.label,
-	      onClick: function onClick() {
-	        return _onClick(v);
-	      }
-	    }, v.text);
-	  }));
-	}
-
-	function LinkLine(_ref) {
-	  var styles = _ref.styles,
-	      data = _ref.data,
-	      unit = _ref.unit,
-	      offsetY = _ref.offsetY,
-	      minTime = _ref.minTime,
-	      rowHeight = _ref.rowHeight,
-	      barHeight = _ref.barHeight,
-	      maxTextWidth = _ref.maxTextWidth;
-	  var x0 = maxTextWidth;
-	  var y0 = rowHeight / 2 + offsetY;
-	  var map = {};
-	  data.forEach(function (v, i) {
-	    map[v.id] = i;
-	  });
-	  return h("g", null, data.map(function (s, i) {
-	    if (!s.end || !s.start || !s.links) {
-	      return null;
-	    }
-
-	    return s.links.map(function (l) {
-	      var j = map[l.target];
-	      var e = data[j];
-	      if (!e || !e.start || !e.end) return null;
-	      var gap = 12;
-	      var arrow = 6;
-	      var mgap = e.type === 'milestone' ? barHeight / 2 : 0;
-	      var y1 = y0 + i * rowHeight;
-	      var y2 = y0 + j * rowHeight;
-	      var vgap = barHeight / 2 + 4;
-
-	      if (y1 > y2) {
-	        vgap = -vgap;
-	      }
-
-	      if (l.type === 'FS') {
-	        var x1 = x0 + (s.end - minTime) / unit;
-	        var x2 = x0 + (e.start - minTime) / unit - mgap;
-	        var p1 = [[x1, y1], [x1 + gap, y1]];
-
-	        if (x2 - x1 >= 2 * gap) {
-	          p1.push([x1 + gap, y2]);
-	        } else {
-	          p1.push([x1 + gap, y2 - vgap]);
-	          p1.push([x2 - gap, y2 - vgap]);
-	          p1.push([x2 - gap, y2]);
-	        }
-
-	        p1.push([x2 - arrow, y2]);
-	        var p2 = [[x2 - arrow, y2 - arrow], [x2, y2], [x2 - arrow, y2 + arrow]];
-	        return h("g", null, h("polyline", {
-	          points: p2s(p1),
-	          style: styles.link
-	        }), h("polygon", {
-	          points: p2s(p2),
-	          style: styles.linkArrow
-	        }));
-	      }
-
-	      if (l.type === 'FF') {
-	        var _x = x0 + (s.end - minTime) / unit;
-
-	        var _x2 = x0 + (e.end - minTime) / unit + mgap;
-
-	        var _p = [[_x, y1], [_x + gap, y1]];
-
-	        if (_x2 <= _x) {
-	          _p.push([_x + gap, y2]);
-	        } else {
-	          _p.push([_x + gap, y2 - vgap]);
-
-	          _p.push([_x2 + gap, y2 - vgap]);
-
-	          _p.push([_x2 + gap, y2]);
-	        }
-
-	        _p.push([_x2 + arrow, y2]);
-
-	        var _p2 = [[_x2 + arrow, y2 - arrow], [_x2, y2], [_x2 + arrow, y2 + arrow]];
-	        return h("g", null, h("polyline", {
-	          points: p2s(_p),
-	          style: styles.link
-	        }), h("polygon", {
-	          points: p2s(_p2),
-	          style: styles.linkArrow
-	        }));
-	      }
-
-	      if (l.type === 'SS') {
-	        var _x3 = x0 + (s.start - minTime) / unit;
-
-	        var _x4 = x0 + (e.start - minTime) / unit - mgap;
-
-	        var _p3 = [[_x3, y1], [_x3 - gap, y1]];
-
-	        if (_x3 <= _x4) {
-	          _p3.push([_x3 - gap, y2]);
-	        } else {
-	          _p3.push([_x3 - gap, y2 - vgap]);
-
-	          _p3.push([_x4 - gap, y2 - vgap]);
-
-	          _p3.push([_x4 - gap, y2]);
-	        }
-
-	        _p3.push([_x4 - arrow, y2]);
-
-	        var _p4 = [[_x4 - arrow, y2 - arrow], [_x4, y2], [_x4 - arrow, y2 + arrow]];
-	        return h("g", null, h("polyline", {
-	          points: p2s(_p3),
-	          style: styles.link
-	        }), h("polygon", {
-	          points: p2s(_p4),
-	          style: styles.linkArrow
-	        }));
-	      }
-
-	      if (l.type === 'SF') {
-	        var _x5 = x0 + (s.start - minTime) / unit;
-
-	        var _x6 = x0 + (e.end - minTime) / unit + mgap;
-
-	        var _p5 = [[_x5, y1], [_x5 - gap, y1]];
-
-	        if (_x5 - _x6 >= 2 * gap) {
-	          _p5.push([_x5 - gap, y2]);
-	        } else {
-	          _p5.push([_x5 - gap, y2 - vgap]);
-
-	          _p5.push([_x6 + gap, y2 - vgap]);
-
-	          _p5.push([_x6 + gap, y2]);
-	        }
-
-	        _p5.push([_x6 + arrow, y2]);
-
-	        var _p6 = [[_x6 + arrow, y2 - arrow], [_x6, y2], [_x6 + arrow, y2 + arrow]];
-	        return h("g", null, h("polyline", {
-	          points: p2s(_p5),
-	          style: styles.link
-	        }), h("polygon", {
-	          points: p2s(_p6),
-	          style: styles.linkArrow
-	        }));
-	      }
-
-	      return null;
-	    });
-	  }));
-	}
-
 	function Bar(_ref) {
 	  var styles = _ref.styles,
 	      data = _ref.data,
@@ -1102,9 +921,9 @@
 	  }));
 	}
 
-	function ownKeys$3(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys$3(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread$3(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$3(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$3(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread$3(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$3(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$3(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	var SIZE = '14px';
 	var TYPE = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
@@ -1179,7 +998,7 @@
 	  };
 	  return {
 	    week: {
-	      fill: 'rgba(252, 248, 227, .6)'
+	      fill: '#f6f9fb'
 	    },
 	    box: _objectSpread$3(_objectSpread$3({}, thickLine), {}, {
 	      fill: bgColor
@@ -1262,10 +1081,9 @@
 	      _ref$thickWidth = _ref.thickWidth,
 	      thickWidth = _ref$thickWidth === void 0 ? 1.4 : _ref$thickWidth,
 	      _ref$styleOptions = _ref.styleOptions,
-	      styleOptions = _ref$styleOptions === void 0 ? {} : _ref$styleOptions,
-	      _ref$showLinks = _ref.showLinks,
-	      showLinks = _ref$showLinks === void 0 ? true : _ref$showLinks,
-	      _ref$showDelay = _ref.showDelay,
+	      styleOptions = _ref$styleOptions === void 0 ? {} : _ref$styleOptions;
+	      _ref.showLinks;
+	      var _ref$showDelay = _ref.showDelay,
 	      showDelay = _ref$showDelay === void 0 ? true : _ref$showDelay,
 	      start = _ref.start,
 	      end = _ref.end;
@@ -1311,31 +1129,6 @@
 	    minTime: minTime,
 	    maxTime: maxTime,
 	    maxTextWidth: maxTextWidth
-	  }) : null, h(Grid, {
-	    styles: styles,
-	    data: data,
-	    width: width,
-	    height: height,
-	    offsetY: offsetY,
-	    rowHeight: rowHeight,
-	    maxTextWidth: maxTextWidth
-	  }), maxTextWidth > 0 ? h(Labels, {
-	    styles: styles,
-	    data: data,
-	    onClick: onClick,
-	    offsetY: offsetY,
-	    rowHeight: rowHeight
-	  }) : null, showLinks ? h(LinkLine, {
-	    styles: styles,
-	    data: data,
-	    unit: unit,
-	    height: height,
-	    current: current,
-	    offsetY: offsetY,
-	    minTime: minTime,
-	    rowHeight: rowHeight,
-	    barHeight: barHeight,
-	    maxTextWidth: maxTextWidth
 	  }) : null, h(Bar, {
 	    styles: styles,
 	    data: data,
@@ -1356,25 +1149,14 @@
 	function _typeof(obj) {
 	  "@babel/helpers - typeof";
 
-	  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-	    module.exports = _typeof = function _typeof(obj) {
-	      return typeof obj;
-	    };
-
-	    module.exports["default"] = module.exports, module.exports.__esModule = true;
-	  } else {
-	    module.exports = _typeof = function _typeof(obj) {
-	      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-	    };
-
-	    module.exports["default"] = module.exports, module.exports.__esModule = true;
-	  }
-
-	  return _typeof(obj);
+	  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+	    return typeof obj;
+	  } : function (obj) {
+	    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
 	}
 
-	module.exports = _typeof;
-	module.exports["default"] = module.exports, module.exports.__esModule = true;
+	module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 	});
 
 	var _typeof = /*@__PURE__*/getDefaultExportFromCjs(_typeof_1);
@@ -1417,9 +1199,9 @@
 	  return node;
 	}
 
-	function ownKeys$2(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys$2(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread$2(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$2(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$2(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread$2(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$2(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$2(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	var SVGGantt = /*#__PURE__*/function () {
 	  function SVGGantt(element, data) {
@@ -1664,9 +1446,9 @@
 	  return ctx;
 	}
 
-	function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$1(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	var CanvasGantt = /*#__PURE__*/function () {
 	  function CanvasGantt(element, data) {
@@ -1787,9 +1569,9 @@
 	  return tokens.join('');
 	}
 
-	function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+	function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-	function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+	function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 	var StrGantt = /*#__PURE__*/function () {
 	  function StrGantt(data) {
@@ -1849,9 +1631,9 @@
 	exports.CanvasGantt = CanvasGantt;
 	exports.SVGGantt = SVGGantt;
 	exports.StrGantt = StrGantt;
-	exports.default = CanvasGantt;
+	exports["default"] = CanvasGantt;
 	exports.utils = utils;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

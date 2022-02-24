@@ -84,7 +84,7 @@ export default function Gantt({
           maxTextWidth={maxTextWidth}
         />
       ) : null}
-      <Grid
+      {/* <Grid
         styles={styles}
         data={data}
         width={width}
@@ -92,8 +92,8 @@ export default function Gantt({
         offsetY={offsetY}
         rowHeight={rowHeight}
         maxTextWidth={maxTextWidth}
-      />
-      {maxTextWidth > 0 ? (
+      /> */}
+      {/* {maxTextWidth > 0 ? (
         <Labels
           styles={styles}
           data={data}
@@ -101,8 +101,8 @@ export default function Gantt({
           offsetY={offsetY}
           rowHeight={rowHeight}
         />
-      ) : null}
-      {showLinks ? (
+      ) : null} */}
+      {/* {showLinks ? (
         <LinkLine
           styles={styles}
           data={data}
@@ -115,7 +115,7 @@ export default function Gantt({
           barHeight={barHeight}
           maxTextWidth={maxTextWidth}
         />
-      ) : null}
+      ) : null} */}
       <Bar
         styles={styles}
         data={data}

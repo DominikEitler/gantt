@@ -20,6 +20,7 @@ export default function YearMonth({
     const t = (months[i + 1] - months[i]) / unit;
     ticks.push((
       <g>
+        <rect x={x} y={0} width={t} height={y2} style={{ fill: '#e0e5e9', 'stroke-width': 1, stroke: '#becad5' }} />
         <line x1={x} x2={x} y1={0} y2={y2} style={styles.line} />
         {t > 50 ? <text x={x + t / 2} y={offsetY * 0.25} style={styles.text3}>{str}</text> : null}
       </g>

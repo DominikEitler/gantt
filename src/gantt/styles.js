@@ -54,7 +54,7 @@ export default function getStyles({
   };
   return {
     week: {
-      fill: 'rgba(252, 248, 227, .6)'
+      fill: '#f6f9fb'
     },
     box: {
       ...thickLine,

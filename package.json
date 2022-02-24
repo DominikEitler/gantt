@@ -19,7 +19,9 @@
     "build:dist": "cross-env NODE_ENV=production rollup -c && uglifyjs -o dist/gantt.min.js dist/gantt.js",
     "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:dist",
     "prepare": "npm run build",
-    "pages": "cd demo && dool build && gh-pages -d ."
+    "pages": "cd demo && dool build && gh-pages -d .",
+    "copy": "npm run build:dist && cp ./dist/gantt.js ../webapp/app/javascript",
+    "dev": "nodemon --exec 'npm run copy'"
   },
   "repository": {
     "type": "git",
@@ -60,8 +62,12 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "gh-pages": "^3.1.0",
+    "nodemon": "^2.0.15",
     "rimraf": "^3.0.2",
     "rollup": "^2.0.0",
     "uglify-js": "^3.10.3"
-  }
+  },
+  "nodemonConfig": {
+    "ignore": ["dist/*"]
+}
 }

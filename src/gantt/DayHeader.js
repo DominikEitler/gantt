@@ -21,6 +21,7 @@ export default function DayHeader({
         {day === 0 || day === 6 ? (
           <rect x={x} y={y0} width={t} height={RH} style={styles.week} />
         ) : null}
+        <rect x={x} y={y0} width={t} height={offsetY - y0} style={{ fill: '#e0e5e9', 'stroke-width': 1, stroke: '#becad5' }} />
         <line x1={x} x2={x} y1={y0} y2={offsetY} style={styles.line} />
         <text x={x + t / 2} y={offsetY * 0.75} style={styles.text3}>{cur.getDate()}</text>
         {i === len - 1 ? (
